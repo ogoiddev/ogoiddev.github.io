@@ -1,0 +1,14 @@
+
+body{
+  width: 50%;
+  margin: auto;
+}
+
+atom-workspace {
+  font-family: sans-serif;
+}
+
+
+
+
+time <MMMM Do, dddd, h:mm:ss a>

@@ -7,54 +7,173 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ogoiddev_PORTFOLIO</title>
-    <link rel="stylesheet" type="text/css" href="application.css" media="screen" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;1,700&family=Bebas+Neue&family=Bree+Serif&family=Cinzel&family=Comforter+Brush&family=Grechen+Fuemen&family=Indie+Flower&family=Lobster&family=Outfit:wght@100;300;500;800;900&family=Playfair+Display+SC:wght@700&family=Poppins:wght@100&family=Press+Start+2P&family=Raleway:ital,wght@0,100;0,600;0,700;0,900;1,200;1,300&family=Rampart+One&family=Roboto+Mono:ital,wght@0,200;0,500;1,700&family=Roboto:wght@100;300&family=Sassy+Frass&family=Secular+One&family=Shalimar&family=Shippori+Antique&family=Stick&family=Yomogi&family=Zen+Loop&display=swap" rel="stylesheet">
+   
+    <style>
+    
+        body {
+           margin: 0; 
+           display: flex;
+           font-family: 'Roboto', sans-serif;
+           flex-direction: column;
+           align-items: center;
+           background: linear-gradient(15deg,#fcfcfc, #d2f1e4);
+        }
+        a {
+             text-decoration: none;
+             list-style-type: none;
+        }
+
+        a:visited {
+             color: none;
+                   }
+
+        .nav-bar { 
+            
+            background-color: #11a36b85;
+            color: #fff;
+            position: fixed;
+            display: block;
+            top: 0;
+            width: 100%;
+            overflow: hidden;
+            
+
+            
+        }
+        .nav-bar ul{
+            
+
+        }
+        .nav-bar li{  
+            float: inline-start;
+            
+            
+
+        }
+        p {
+            text-align: justify;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 30px;
+            background: #2a2d34;
+            color: whitesmoke;
+            font-family: 'Asap', sans-serif;
+            
+            
+           
+        }
+        .paragrafos {
+            margin: 30px, 50px;
+            max-width: 833px;
+           
+
+        }
+        #foto {
+            border-radius: 40% 40% 5% 80%; 
+        }
+
+        .redes {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-end;
+            
+            margin: 0 0 40px 0 ;
+            padding: 0px 20px;
+        }
         
+        .redes img {
+            margin: 0 20px;
+        }
+            
+        
+        #apresenta {
+            color: black;
+            font-family: 'Bree Serif', serif;
+            font-weight: 400;
+            font-size: 3em;
+            margin: 0px 80px;
+            
+                
+        }    
+        .ninja {
+            
+            padding: 100px 0;
+        }           
+          
+      
+        .container {
+            display: flex;
+            flex-direction: row; 
+            width: 1300px;
+            max-width: auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            justify-content: center;
+
+         
+        }
+        #sobre {
+            margin: 100px 0;
+        }
+   
+    </style>
+
 </head>
 
-<center>
+<body>
+    
+    <div class="nav-bar">
+        <ul>
+            <a href="#sobre" >Sobre mim</a> 
+            <a href="#habilidades">Minhas habilidades</a>
+            <a href="#rede">Redes sociais</a>
+        </ul>
+    </div>
 
+
+
+    <div class="container">
+            <h1 id="apresenta">Meu nome é <br> Diogo Martini Pantaleão</h1>
+     
+            <a><img src="foto_perfil_ogoiddev.jpg" alt="Foto de perfil do Diogo 'sorrindo'" id="foto" width="333"></a>
 
     
-    <div><h1>Eu sou Diogo Martini Pantaleão</h1></div>
-            
-    <a href="#sobre" >Sobre mim</a> &ensp;
-    <a href="#habilidades">Minhas habilidades</a> &ensp;
-    <a href="#habilidades">Redes sociais</a> 
-
-    <hr>
-
-    <a id="foto"><img src="foto_perfil_ogoiddev.jpg" alt="Foto de perfil do Diogo 'sorrindo'" width="333px"></a>
     
-    <br>
+    <div class="redes">
+        <a id="rede" href="https://github.com/ogoiddev/dmpdev" target="_blank"><img src="github-brands.svg" alt="icone linkedin" width="50px" ></a>
 
-    <a id="rede" href="https://www.linkedin.com/in/dmpdev" target="_blank"><img src="iconeLinkedin.png" alt="icone github" width="47px"></a>
-    
-    <a id="rede" href="https://github.com/ogoiddev/dmpdev" target="_blank"><img src="iconeGithub.png" alt="icone linkedin" width="50px" ></a>
+        <a id="rede" href="https://www.linkedin.com/in/dmpdev" target="_blank"><img src="linkedin-brands.svg" alt="icone github" width="50px"></a>
+    </div>
 
-   <div class="container">
+    </div>
+
+    <div class="paragrafos">
         <p id="habilidades">
 
-            <strong>Tenho habilidas em desenvolvimento Web, full stack. JS, HTML, CSS, GIT, REACT, NODEJS e PYTHON </strong> são algumas das ferramentnas que tenho conhecimento. <br>
+            <strong>Tenho habilidades em desenvolvimento Web, full stack. JS, HTML, CSS, GIT, REACT, NODEJS e PYTHON </strong> são algumas das ferramentnas que utilizo. <br>
             <br>
             <em>Por 4 anos trabalhei como analista de processos e controlador de estoque, onde desenvolvi habilidades com o sistema SAP, criação de planilhas em Excel e apoio em procedimentos de produção. Já atuei como técnico de informatica e técnico de Urna eletrônica no TRE/PR. Tenho afinidade com sistemas e tecnologia desde 2000, que foi quando me formei em digitação e Windows. Já tive a experiencia de morar na Europa por 3 anos aproximadamente, onde desenvolvi um pouco da língua inglesa e a capacidade de adaptação cultural. E dentre outras habilidades, tive 3 anos de experiencia no empreendedorismo, com a criação de uma Marca atuando no ramo de vestuário.</em>
         </p>
     </div>
-   
-    
-    <div class="container">
+
+    <div class="paragrafos">
         <p id="sobre">
 
-         <strong>Olá, sou brasileiro e me chamo Diogo, nasci em 1985 na cidade de Ubiratã/PR.</strong> E é uma grande satisfação poder me apresentar a você um pouquinho sobre. Sou forte de espirito e tenho bastante cuidado e atenção a ter respeito com o proximo. Apaixonado por tecnologia e cheio de amor no coração. Tenho um sonho eterno de deixar um bom legado no mundo e uma frase que carrego comigo hoje é: <strong>"Honestidade em pequenas coisas, não é uma coisa pequena"</strong>
+            <strong>Olá, sou brasileiro e me chamo Diogo, nasci em 1985 na cidade de Ubiratã/PR.</strong> E é uma grande satisfação poder me apresentar a você um pouquinho sobre. Sou forte de espirito e tenho bastante cuidado e atenção a ter respeito com o proximo. Apaixonado por tecnologia e cheio de amor no coração. Tenho um sonho eterno de deixar um bom legado no mundo e uma frase que carrego comigo hoje é: <strong>"Honestidade em pequenas coisas, não é uma coisa pequena"</strong>
        
         </p>
     </div>
-
     
+    <div class="ninja">
+        <a href="#foto"><img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/ninja_1f977.png"  alt="Ninja sumindo"></a>
+    </div>
 
-    <a href="#foto"><img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/ninja_1f977.png" alt="Ninja sumindo"></a>
 
-
-</center>
 
 </body>
 </html>

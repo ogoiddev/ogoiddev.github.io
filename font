@@ -1,0 +1,32 @@
+/** 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;1,700&family=Bebas+Neue&family=Bree+Serif&family=Cinzel&family=Comforter+Brush&family=Grechen+Fuemen&family=Indie+Flower&family=Lobster&family=Outfit:wght@100;300;500;800;900&family=Playfair+Display+SC:wght@700&family=Poppins:wght@100&family=Press+Start+2P&family=Raleway:ital,wght@0,100;0,600;0,700;0,900;1,200;1,300&family=Rampart+One&family=Roboto+Mono:ital,wght@0,200;0,500;1,700&family=Roboto:wght@100;300&family=Sassy+Frass&family=Secular+One&family=Shalimar&family=Shippori+Antique&family=Stick&family=Yomogi&family=Zen+Loop&display=swap" rel="stylesheet">
+CSS rules to specify families
+
+font-family: 'Asap', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Bree Serif', serif;
+font-family: 'Cinzel', serif;
+font-family: 'Comforter Brush', cursive;
+font-family: 'Grechen Fuemen', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Outfit', sans-serif;
+font-family: 'Playfair Display SC', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Rampart One', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Sassy Frass', cursive;
+font-family: 'Secular One', sans-serif;
+font-family: 'Shalimar', cursive;
+font-family: 'Shippori Antique', sans-serif;
+font-family: 'Stick', sans-serif;
+font-family: 'Yomogi', cursive;
+font-family: 'Zen Loop', cursive;
+
+**/

@@ -15,41 +15,62 @@
     <style>
     
         body {
-           margin: 0; 
+           margin: 0;
+           padding: 0;
+           width: 100%; 
            display: flex;
            font-family: 'Roboto', sans-serif;
            flex-direction: column;
            align-items: center;
-           background: linear-gradient(15deg,#fcfcfc, #d2f1e4);
+           background: linear-gradient(15deg,#fcfcfc, #b9e3ff);
         }
+
         a {
              text-decoration: none;
-             list-style-type: none;
+             color: whitesmoke;
+             font-size: 20px;
+           
+
+
         }
 
         a:visited {
              color: none;
                    }
 
+
         .nav-bar { 
             
-            background-color: #11a36b85;
+            background: #2a2d34;
             color: #fff;
             position: fixed;
             display: block;
             top: 0;
             width: 100%;
             overflow: hidden;
-            
-
-            
+            text-align: center;
+    
         }
+
+        
         .nav-bar ul{
             
+            
+
 
         }
-        .nav-bar li{  
-            float: inline-start;
+        .nav-bar a {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            padding: 10px 50px;
+            display: inline-block;
+            
+        }
+        .nav-bar ul a:hover {
+            background: #fff;  
+            color:black;
+            transition-property: background-color. color;
+            transition-duration: 1s;
+        
             
             
 
@@ -57,46 +78,49 @@
         p {
             text-align: justify;
             border-radius: 30px;
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 400;
             padding: 30px;
             background: #2a2d34;
             color: whitesmoke;
-            font-family: 'Asap', sans-serif;
+            font-family: 'Roboto', sans-serif;
+            box-shadow: 5px 5px 55px whitesmoke;
+            line-height: 1.5;
             
             
            
         }
         .paragrafos {
             margin: 30px, 50px;
-            max-width: 833px;
+            max-width: 1033px;
+           
            
 
         }
         #foto {
-            border-radius: 40% 40% 5% 80%; 
+            border-radius: 5% 40% 5% 80%; 
         }
 
         .redes {
             display: flex;
-            flex-flow: column;
-            align-items: flex-end;
-            
-            margin: 0 0 40px 0 ;
-            padding: 0px 20px;
+            flex-direction: column;
+            margin: 265px 0 0 15px;
+
         }
         
-        .redes img {
-            margin: 0 20px;
+        .redes li {
+            
+            
+            
         }
             
         
         #apresenta {
             color: black;
             font-family: 'Bree Serif', serif;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 3em;
-            margin: 0px 80px;
+            margin: 40px 60px 60px 20px;
             
                 
         }    
@@ -111,10 +135,9 @@
             flex-direction: row; 
             width: 1300px;
             max-width: auto;
-            margin-top: 100px;
-            margin-bottom: 100px;
+            margin: 200px 0 200px 0;
             justify-content: center;
-
+            
          
         }
         #sobre {
@@ -140,7 +163,7 @@
     <div class="container">
             <h1 id="apresenta">Meu nome é <br> Diogo Martini Pantaleão</h1>
      
-            <a><img src="foto_perfil_ogoiddev.jpg" alt="Foto de perfil do Diogo 'sorrindo'" id="foto" width="333"></a>
+            <img src="foto_perfil_ogoiddev.jpg" alt="Foto de perfil do Diogo 'sorrindo'" id="foto" width="333">
 
     
     
@@ -152,8 +175,8 @@
 
     </div>
 
-    <div class="paragrafos">
-        <p id="habilidades">
+    <div id="habilidades" class="paragrafos">
+        <p>
 
             <strong>Tenho habilidades em desenvolvimento Web, full stack. JS, HTML, CSS, GIT, REACT, NODEJS e PYTHON </strong> são algumas das ferramentnas que utilizo. <br>
             <br>
@@ -161,8 +184,8 @@
         </p>
     </div>
 
-    <div class="paragrafos">
-        <p id="sobre">
+    <div id="sobre" class="paragrafos">
+        <p>
 
             <strong>Olá, sou brasileiro e me chamo Diogo, nasci em 1985 na cidade de Ubiratã/PR.</strong> E é uma grande satisfação poder me apresentar a você um pouquinho sobre. Sou forte de espirito e tenho bastante cuidado e atenção a ter respeito com o proximo. Apaixonado por tecnologia e cheio de amor no coração. Tenho um sonho eterno de deixar um bom legado no mundo e uma frase que carrego comigo hoje é: <strong>"Honestidade em pequenas coisas, não é uma coisa pequena"</strong>
        

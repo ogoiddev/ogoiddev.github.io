@@ -21,7 +21,7 @@ body {
     top: 0;
 }
 #header {
-    background-image: url(back_top.jpg);
+    background-image: url(back_top_sizeless.jpg);
     height: 300px;
     background-size: cover;
     background-position: 0 35%;

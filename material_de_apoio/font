@@ -1,0 +1,101 @@
+/** 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;1,700&family=Bebas+Neue&family=Bree+Serif&family=Cinzel&family=Comforter+Brush&family=Grechen+Fuemen&family=Indie+Flower&family=Lobster&family=Outfit:wght@100;300;500;800;900&family=Playfair+Display+SC:wght@700&family=Poppins:wght@100&family=Press+Start+2P&family=Raleway:ital,wght@0,100;0,600;0,700;0,900;1,200;1,300&family=Rampart+One&family=Roboto+Mono:ital,wght@0,200;0,500;1,700&family=Roboto:wght@100;300&family=Sassy+Frass&family=Secular+One&family=Shalimar&family=Shippori+Antique&family=Stick&family=Yomogi&family=Zen+Loop&display=swap" rel="stylesheet">
+CSS rules to specify families
+
+font-family: 'Asap', sans-serif;
+font-family: 'Bebas Neue', cursive;
+font-family: 'Bree Serif', serif;
+font-family: 'Cinzel', serif;
+font-family: 'Comforter Brush', cursive;
+font-family: 'Grechen Fuemen', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Outfit', sans-serif;
+font-family: 'Playfair Display SC', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Rampart One', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Sassy Frass', cursive;
+font-family: 'Secular One', sans-serif;
+font-family: 'Shalimar', cursive;
+font-family: 'Shippori Antique', sans-serif;
+font-family: 'Stick', sans-serif;
+font-family: 'Yomogi', cursive;
+font-family: 'Zen Loop', cursive;
+
+**/
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%; 
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(15deg,#fcfcfc, #b9e3ff);
+    overflow: auto;
+    margin: auto;
+}
+#foto {
+     border-radius: 5% 40% 5% 80%; 
+}
+.redes {
+     display: flex;
+     flex-direction: column;
+     margin: 265px 0 0 15px;
+}
+#apresenta {
+    color: black;
+    font-family: 'Bree Serif', serif;
+    font-weight: 500;
+    font-size: 3em;
+    margin: 40px 60px 60px 20px;         
+}
+.container {
+    display: flex;
+    flex-direction: row wrap; 
+    width: 1300px;
+    padding: 0;
+    margin: 200px 0 200px 0;
+    justify-content: center;
+    min-width: 534px;
+}
+#sobre {
+    margin: 100px 0;
+}
+p {
+    text-align: justify;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 30px;
+    background: #2a2d34;
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 5px 5px 55px whitesmoke;
+    line-height: 1.5;
+}
+.paragrafos {
+    margin: 0px, 50px;
+    max-width: 1033px;
+}    
+ h2 {
+    background: #2a2d34;
+    color: #fff;
+    border-radius: 10px;
+    font-family: 'Bree Serif', serif;
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+    float: left;     
+ }

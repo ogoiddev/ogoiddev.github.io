@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(15deg, rgb(255, 255, 255), rgba(212, 212, 212, 0.507));
+    font-family: 'Bree Serif', serif;  
+}
+#topRef a{
+    color: black;
+    font-size: 60px;
+    margin: 30px;
+}
+#topRef {
+    display: flex;
+    justify-content: center;
+}
+#header {
+    background-image: url(back_top.jpg);
+    height: 300px;
+    background-size: cover;
+    background-position: 0 35%;
+    width: 100%;
+    box-shadow: 0 10px 50px white;
+    position: fixed;
+    top: 0;   
+    display: flex;
+    justify-content: center;
+    z-index: 1;  
+}
+#header a{
+    background: rgba(255, 247, 237, 0.87);
+    border-radius: 5%;
+    padding: 5px 10px;
+    margin: 15px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;   
+    width: 170px;   
+}   
+#header a:hover {
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    transition-duration: 0.5s;
+    box-shadow: 2px 2px 10px whitesmoke;  
+}
+#header ul{
+    width: 700px;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-around;
+    margin-top: 230px;
+    text-align: center;  
+}
+.container {
+    
+    display: flex;
+    margin: 350px auto 50px auto;
+    justify-content: center;
+    width: 55%;
+    min-width: 500px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2em;
+}
+#foto {
+    border-radius: 70% 40% 40% 80%;
+    height: 383px;
+    margin-left: 20px;
+    cursor: pointer;
+
+}
+#icones {
+    display: flex;
+    margin: 240px 10px 0 10px;
+    flex-flow: column;
+    height: 150px;
+    font-size: 60px;  
+}
+#icones a:nth-of-type(1) {
+    color: black;
+}
+#icones a:nth-of-type(2) {
+    color: rgb(0, 0, 126);
+}
+.paragrafos {
+    width: 55%;
+    min-width: 500px;
+    margin: auto;
+}
+.p1, .p2 {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    background: rgba(139, 228, 201, 0.534);
+    box-shadow: 5px 5x 15px whitesmoke;
+    font-family: 'Roboto Mono', monospace;
+    padding: 40px;
+    margin: 50px 0 80px 0;
+    text-align: justify;
+    line-height: 1.7;
+    position: relative;    
+    
+}
+.paragrafos #habilidadesT {
+    position: absolute;
+    top: -350px
+   
+
+}
+.paragrafos #sobreT {
+    position: absolute;
+    bottom: 540px; 
+    
+}
+#ninja {
+    margin: 0px auto 190px auto;
+    display: block;
+}

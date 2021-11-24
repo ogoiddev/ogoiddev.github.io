@@ -13,7 +13,9 @@ body {
 }
 #topRef {
     display: flex;
-    justify-content: center;
+    justify-content: right;
+    margin-right: 15%;
+    float: right;
 }
 #top {
     position: absolute;
@@ -87,7 +89,7 @@ body {
     color: rgb(0, 0, 126);
 }
 .paragrafos {
-    width: 55%;
+    width: 60%;
     min-width: 500px;
     margin: auto;
 }

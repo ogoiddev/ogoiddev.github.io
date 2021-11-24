@@ -15,6 +15,11 @@ body {
     display: flex;
     justify-content: center;
 }
+#top {
+    position: absolute;
+    color: transparent;
+    top: 0;
+}
 #header {
     background-image: url(back_top.jpg);
     height: 300px;
@@ -53,11 +58,10 @@ body {
     text-align: center;  
 }
 .container {
-    
     display: flex;
     margin: 350px auto 50px auto;
     justify-content: center;
-    width: 55%;
+    width: 60%;
     min-width: 500px;
     font-family: 'Outfit', sans-serif;
     font-size: 2em;

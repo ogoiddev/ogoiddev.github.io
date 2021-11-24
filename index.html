@@ -1,204 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ogoiddev_PORTFOLIO</title>
-    
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;1,700&family=Bebas+Neue&family=Bree+Serif&family=Cinzel&family=Comforter+Brush&family=Grechen+Fuemen&family=Indie+Flower&family=Lobster&family=Outfit:wght@100;300;500;800;900&family=Playfair+Display+SC:wght@700&family=Poppins:wght@100&family=Press+Start+2P&family=Raleway:ital,wght@0,100;0,600;0,700;0,900;1,200;1,300&family=Rampart+One&family=Roboto+Mono:ital,wght@0,200;0,500;1,700&family=Roboto:wght@100;300&family=Sassy+Frass&family=Secular+One&family=Shalimar&family=Shippori+Antique&family=Stick&family=Yomogi&family=Zen+Loop&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/0ab55da73a.js" crossorigin="anonymous"></script>
-    <style>
-    
-        body {
-           margin: 0;
-           padding: 0;
-           width: 100%; 
-           display: flex;
-           font-family: 'Roboto', sans-serif;
-           flex-direction: column;
-           align-items: center;
-           background: linear-gradient(15deg,#fcfcfc, #b9e3ff);
-        }
-
-        a {
-             text-decoration: none;
-             color: whitesmoke;
-             font-size: 20px;
-           
-
-
-        }
-
-        a:visited {
-             color: none;
-                   }
-
-
-        .nav-bar { 
-            
-            background: #2a2d34;
-            color: #fff;
-            position: fixed;
-            display: block;
-            top: 0;
-            width: 100%;
-            overflow: hidden;
-            text-align: center;
-    
-        }
-
-        
-        .nav-bar ul{
-            
-            
-
-
-        }
-        .nav-bar a {
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            padding: 10px 50px;
-            display: inline-block;
-            
-        }
-        .nav-bar ul a:hover {
-            background: #fff;  
-            color:black;
-            transition-property: background-color. color;
-            transition-duration: 1s;
-        
-            
-            
-
-        }
-        p {
-            text-align: justify;
-            border-radius: 30px;
-            font-size: 20px;
-            font-weight: 400;
-            padding: 30px;
-            background: #2a2d34;
-            color: whitesmoke;
-            font-family: 'Roboto', sans-serif;
-            box-shadow: 5px 5px 55px whitesmoke;
-            line-height: 1.5;
-            
-            
-           
-        }
-        .paragrafos {
-            margin: 30px, 50px;
-            max-width: 1033px;
-           
-           
-
-        }
-        #foto {
-            border-radius: 5% 40% 5% 80%; 
-        }
-
-        .redes {
-            display: flex;
-            flex-direction: column;
-            margin: 265px 0 0 15px;
-
-        }
-        
-        .redes a {
-            color: black;
-            font-size: 60px;
-        }
-        #rede1 {
-            color: rgb(0, 0, 163);
-        }
-            
-        
-        #apresenta {
-            color: black;
-            font-family: 'Bree Serif', serif;
-            font-weight: 500;
-            font-size: 3em;
-            margin: 40px 60px 60px 20px;
-            
-                
-        }    
-        .ninja {
-            
-            padding: 100px 0;
-        }           
-          
-      
-        .container {
-            display: flex;
-            flex-direction: row wrap; 
-            width: 1300px;
-            padding: 0;
-            margin: 200px 0 200px 0;
-            justify-content: center;
-            min-width: 534px;
-         
-        }
-        #sobre {
-            margin: 100px 0;
-        }
-   
-    </style>
-
 </head>
-
 <body>
-    
-    <div class="nav-bar">
+    <div id="header">
         <ul>
-            <a href="#sobre" >Sobre mim</a> 
-            <a href="#habilidades">Minhas habilidades</a>
-            <a href="#rede">Redes sociais</a>
+            <a href="#sobreT" >Sobre mim</a> 
+            <a href="#habilidadesT">Minhas habilidades</a>
+            <a href="#projetos">Projetos</a>
         </ul>
-    </div>
-
-
-
+    </div>        
+  
+    
     <div class="container">
-            <h1 id="apresenta">Meu nome é <br> Diogo Martini Pantaleão</h1>
-     
-            <img src="foto_perfil_ogoiddev.jpg" alt="Foto de perfil do Diogo 'sorrindo'" id="foto" width="333">
+        <h1 id="apresenta">Olá, meu nome é <br> Diogo Martini Pantaleão</h1>
+        
+        <img id="foto" src="foto_perfil_ogoiddev.jpg" alt="Foto de perfil do Diogo 'sorrindo'">
+       
+        <div id="icones">
+            <i class="fab fa-github"></i>
+            <i id="linkedin" class="fab fa-linkedin"></i>
+        </div>       
+    </div>  
+   
+    <div class="paragrafos">
 
-    
-    
-    <div class="redes">
-        <a id="rede" href="https://github.com/ogoiddev/dmpdev" target="_blank"><i class="fab fa-github"></i></a>
-
-        <a id="rede1" href="https://www.linkedin.com/in/dmpdev" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-
-    </div>
-
-    <div id="habilidades" class="paragrafos">
+        <h2 id="habilidadesT">Habilidades</h2>
         <p>
-
-            <strong>Tenho habilidades em desenvolvimento Web, full stack. JS, HTML, CSS, GIT, REACT, NODEJS e PYTHON </strong> são algumas das ferramentnas que utilizo. <br>
-            <br>
+            <strong>Tenho habilidades em desenvolvimento Web, full stack. JS, HTML, CSS, GIT, REACT, NODEJS e PYTHON </strong> são algumas das ferramentnas que utilizo. 
+         
             <em>Por 4 anos trabalhei como analista de processos e controlador de estoque, onde desenvolvi habilidades com o sistema SAP, criação de planilhas em Excel e apoio em procedimentos de produção. Já atuei como técnico de informatica e técnico de Urna eletrônica no TRE/PR. Tenho afinidade com sistemas e tecnologia desde 2000, que foi quando me formei em digitação e Windows. Já tive a experiencia de morar na Europa por 3 anos aproximadamente, onde desenvolvi um pouco da língua inglesa e a capacidade de adaptação cultural. E dentre outras habilidades, tive 3 anos de experiencia no empreendedorismo, com a criação de uma Marca atuando no ramo de vestuário.</em>
         </p>
-    </div>
-
-    <div id="sobre" class="paragrafos">
+  
+        <h2 id="sobreT">Sobre</h2>
         <p>
-
             <strong>Olá, sou brasileiro e me chamo Diogo, nasci em 1985 na cidade de Ubiratã/PR.</strong> E é uma grande satisfação poder me apresentar a você um pouquinho sobre. Sou forte de espirito e tenho bastante cuidado e atenção a ter respeito com o proximo. Apaixonado por tecnologia e cheio de amor no coração. Tenho um sonho eterno de deixar um bom legado no mundo e uma frase que carrego comigo hoje é: <strong>"Honestidade em pequenas coisas, não é uma coisa pequena"</strong>
-       
         </p>
+   
+        
     </div>
-    
-    <div class="ninja">
-        <a href="#foto"><img src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/ninja_1f977.png"  alt="Ninja sumindo"></a>
-    </div>
-
-
-
+    <i class="fab fa-github"></i>
+        <img id="ninja" src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/ninja_1f977.png"  alt="GIF de um Ninja sumindo na fumaça">
+       
 </body>
 </html>

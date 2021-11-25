@@ -1,3 +1,9 @@
+@media (max-width: 660px){
+	.welcome.panel-widget-style {
+		margin-left: 20px !important;
+	}
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -19,7 +25,7 @@ body {
 }
 #top {
     position: absolute;
-    color: transparent;
+    text-transform: transparent;
     top: 0;
 }
 #header {
@@ -43,7 +49,7 @@ body {
     font-size: 18px;
     color: black;
     text-decoration: none;   
-    width: 170px;   
+    width: 170px;  
 }   
 #header a:hover {
     background: rgba(0, 0, 0, 0.65);
@@ -54,17 +60,18 @@ body {
 #header ul{
     width: 700px;
     display: flex;
-    flex-flow: nowrap;
+    flex-flow: wrap;
     justify-content: space-around;
     margin-top: 230px;
-    text-align: center;  
+    text-align: center;
+    overflow: auto;  
 }
 .container {
     display: flex;
     margin: 350px auto 50px auto;
     justify-content: center;
     width: 60%;
-    min-width: 500px;
+    min-width: 400px;
     font-family: 'Outfit', sans-serif;
     font-size: 2em;
 }
@@ -73,7 +80,6 @@ body {
     height: 383px;
     margin-left: 20px;
     cursor: pointer;
-
 }
 #icones {
     display: flex;
@@ -88,36 +94,41 @@ body {
 #icones a:nth-of-type(2) {
     color: rgb(0, 0, 126);
 }
+.iconH {
+   
+    display: flex;
+    justify-content: space-around;
+    font-size: 60px;
+    height: fit-content;
+    margin-bottom: 20px;
+}
 .paragrafos {
     width: 60%;
     min-width: 500px;
     margin: auto;
+    font-weight: 300;  
 }
 .p1, .p2 {
     display: flex;
     flex-flow: column;
-    justify-content: space-between;
     border-radius: 20px;
     background: rgba(139, 228, 201, 0.534);
+    font-size: 16px;
     box-shadow: 5px 5x 15px whitesmoke;
     font-family: 'Roboto Mono', monospace;
     padding: 40px;
-    margin: 50px 0 80px 0;
+    margin: 70px 0 80px 0;
     text-align: justify;
-    line-height: 1.7;
-    position: relative;    
-    
+    line-height: 1.5;
+    position: relative;  
 }
 .paragrafos #habilidadesT {
     position: absolute;
     top: -350px
-   
-
 }
 .paragrafos #sobreT {
     position: absolute;
     bottom: 540px; 
-    
 }
 #ninja {
     margin: 0px auto 190px auto;

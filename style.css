@@ -10,7 +10,10 @@
 }
 body {
     background: linear-gradient(15deg, rgb(255, 255, 255), rgba(212, 212, 212, 0.507));
-    font-family: 'Bree Serif', serif;  
+    font-family: 'Bree Serif', serif;
+    width: 95%;
+    overflow: auto;
+
 }
 #topRef a{
     color: black;
@@ -69,9 +72,13 @@ body {
 .container {
     display: flex;
     margin: 350px auto 50px auto;
-    justify-content: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    overflow-wrap: normal;
     width: 60%;
-    min-width: 400px;
+   
     font-family: 'Outfit', sans-serif;
     font-size: 2em;
 }
@@ -129,6 +136,9 @@ body {
 .paragrafos #sobreT {
     position: absolute;
     bottom: 540px; 
+}
+span.italico {
+    font-style: italic;
 }
 #ninja {
     margin: 0px auto 190px auto;

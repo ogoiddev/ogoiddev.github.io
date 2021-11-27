@@ -12,8 +12,8 @@ body {
     }
 #cabecalho {
         background-image: url(top_fundo.jpg);
-        background-position: 73% 70%;
-        background-size: 120%;
+        background-position: 73% 73%;
+        background-size: cover;
         position: fixed;
         top: 0;
         width: 100%;

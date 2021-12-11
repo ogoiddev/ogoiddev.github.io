@@ -11,6 +11,7 @@ body {
     font-weight: 600;
     min-width: 320px;
     overflow: auto;
+    border: solid;
     }
 
 #cabecalho {
@@ -99,14 +100,21 @@ h3 {
     display: inline-block;
     margin: 10px 30px 0 0;
     }
-    @media (max-width: 700px) {
-    .paragrafos {
+
+@media (max-width: 700px) {
+    .paragrafos { 
         display: block;
         padding: 5px;
-        }
+    }
     main {
         display: block;
         padding: 25px 0;
         margin-right: 20px;
-        }
     }
+    nav {
+        display: block;
+        
+        
+        border: solid;
+    }
+}

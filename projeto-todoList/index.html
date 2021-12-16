@@ -9,28 +9,29 @@
 </head>
 <body>
     <header id="title">
-        <h1>Minha Lista de Tarefas</h1>
-        <p id="funcionamento">"Clique duas vezes em um item para marcá-lo como completo"</p>
-        <div id="input">
-            <input id="texto-tarefa" placeholder="Digite sua tarefa" type="text" value="">
-        </div>
-        <button id="criar-tarefa">Click para adicionar, ou <br> Aperte o ENTER</button>
+        <h1 class="flexHeader" >Minha Lista de Tarefas</h1>
+        <p class="flexHeader" id="funcionamento">"Clique duas vezes em um item para marcá-lo como completo"</p>
+        <section id="input">
+            <input class="flexHeader" id="texto-tarefa" placeholder="Digite sua tarefa" type="text" value="">
+        </section>
+        <button class="flexHeader" id="criar-tarefa">Click para adicionar, ou <br> Aperte o ENTER</button>
     </header>
     <main>
-        <section id='sectionOfButtons'>
-            <button id="mover-cima">&#128316; Mover para cima</button>
-            <button id="mover-baixo">&#128317; Mover para baixo</button>
-            <button id="salvar-tarefas">Salvar lista de tarefas</button>
-            <button id="remover-finalizados">Apagar tarefas finalizadas</button>
-            <button id="remover-selecionado">Remover item selecionado</button>
-            <button id="apaga-tudo">Apagar tudo</button>
-        </section>
+    <section id='sectionOfButtons'>
+        <button class="flexItem" id="salvar-tarefas">Salvar lista de tarefas</button>
+        <button class="flexItem" id="remover-finalizados">Apagar tarefas finalizadas</button>
+        <button class="flexItem" id="remover-selecionado">Remover item selecionado</button>
+        <button id="apaga-tudo">Apagar tudo</button>
+    </section>
         <section class='sectionList'>
-            <h2>Check list:</h2>
-            <ol id="lista-tarefas"></ol>
+                <ol id="lista-tarefas"></ol>
+                <section class='buttonUpDown'>
+                    <button id="mover-cima">&#128316;</button>
+                    <button id="mover-baixo">&#128317;</button>
+                </section>
         </section>
     </main>
-    <script src="script.js"></script>
     <footer>@ogoidmp</footer>
+    <script src="script.js"></script>
 </body>
 </html> 

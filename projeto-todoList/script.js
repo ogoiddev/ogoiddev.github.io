@@ -46,18 +46,18 @@ function clearSelected() {
 document.querySelector('#remover-selecionado').addEventListener('click', clearSelected);
 
 function selectedToDone(event) {
-  const textDecoration = event.target;
+  const lineThrough = event.target;
   let cont = 0;
-  for (let index = 0; index < textDecoration.classList.length; index += 1) {
-    if (textDecoration.classList[index] === 'completed') {
+  for (let index = 0; index < lineThrough.classList.length; index += 1) {
+    if (lineThrough.classList[index] === 'completed') {
       cont += 1;
     }
   }
   if (cont > 0) {
-    textDecoration.classList.remove('completed');
+    lineThrough.classList.remove('completed');
     return;
   }
-  textDecoration.classList.add('completed');
+  lineThrough.classList.add('completed');
 }
 listOf.addEventListener('dblclick', selectedToDone);
 
@@ -88,7 +88,7 @@ function saveList() {
 document.querySelector('#salvar-tarefas').addEventListener('click', saveList);
 
 window.addEventListener('load', () => {
-  if (localStorage.length === 0) {
+  if (localStorage.getItem('conteudo') === null) {
     return;
   }
   const element = localStorage.getItem('conteudo').split(',');
@@ -102,7 +102,7 @@ window.addEventListener('load', () => {
 });
 
 function changePositionTo(arr, from, to) {
-  // to === começo da posição de referencia // from = posição do elemento a ser movido // '[0]' resera a posição do elemento para adicionar na posição de referencia;
+  // to === começo da posição de referencia // from = posição do elemento a ser movido // '[0]' resera a posição do elemento para adicionar na posição de referencia *** estudar mais sobre ???;
   arr.splice(to, 0, arr.splice(from, 1)[0]);
   return arr;
 }
@@ -124,11 +124,6 @@ function moveUp() {
 }
 
 document.querySelector('#mover-cima').addEventListener('click', moveUp);
-document.querySelector('#mover-cima').addEventListener('keydown', (when) => {
-  if (when.key === 38) {
-    moveUp();
-  }
-});
 
 function moveDown() {
   let arrayString = [...listOf.children];
@@ -141,8 +136,3 @@ function moveDown() {
 }
 
 document.querySelector('#mover-baixo').addEventListener('click', moveDown);
-document.querySelector('#mover-baixo').addEventListener('keydown', (eventt) => {
-  if (eventt.which === 40) {
-    moveDown();
-  }
-});

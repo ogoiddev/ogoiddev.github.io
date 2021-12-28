@@ -1,94 +1,107 @@
-// Função configurada por ter configurado o link do <script> no <head> do HTML. Refencia dos exercicios;
+const colorPalette = document.getElementById('color-palette');
+const pixelBoard = document.getElementById('pixel-board');
+const pixelLine = document.getElementById('pixel-line');
+const pixels = document.getElementsByClassName('pixel');
+const buttonClear = document.getElementById('clear-board');
+const buttonVQV = document.getElementById('generate-board');
+const inputN = document.getElementById('board-size');
+const inputNP = document.getElementById('palette-size');
 
-const listOfColors = document.querySelectorAll('.color');
+const tagFactory = (tagType, classX) => {
+  const newTag = document.createElement(tagType);
+  newTag.classList.add(classX);
+  return newTag;
+};
 
-function colorX(event) {
-  const alvo = event;
-  const beforeSelected = document.querySelector('.selected');
-  beforeSelected.classList.remove('selected');
-  alvo.target.classList.add('selected');
-}
-for (let index = 0; index < listOfColors.length; index += 1) {
-  listOfColors[index].addEventListener('click', colorX);
-}
-document.getElementById('eraser').addEventListener('click', colorX);
+const eventFactory = (element, eventType, functionX) => {
+  element.addEventListener(eventType, functionX);
+};
 
-function letsPaint() {
-  function pixelToPaint(event) {
-    const toPrint = event;
-    const color = document.querySelector('.selected');
-    toPrint.target.style.backgroundColor = getComputedStyle(color).backgroundColor;
+const ramdomColor = () => {
+  let colorX = 'rgb(*, *, *)';
+  for (let i = 1; i <= 3; i += 1) {
+    colorX = colorX.replace('*', Math.random() * 255);
   }
-  const listOfPixels = document.querySelectorAll('.pixel');
-  for (let index = 0; index < listOfPixels.length; index += 1) {
-    listOfPixels[index].addEventListener('click', pixelToPaint);
-  }
-  // document.location.reload(true); Método para recarregar página
-  function clearBoard() {
-    for (let index = 0; index < listOfPixels.length; index += 1) {
-      const color = document.getElementById('eraser');
-      listOfPixels[index].style.backgroundColor = getComputedStyle(color).backgroundColor;
-    }
-  }
-  const buttonToClear = document.getElementById('clear-board');
-  buttonToClear.addEventListener('click', clearBoard);
-}
+  return colorX;
+};
 
-const inputElement = document.querySelector('#board-size');
-let userChoice = inputElement.valueAsNumber;
-// const tagBaseDefalt = document.querySelector('.pixel');
-// construção de lógica para deletar board e criar uma nova elaborada com o auxilio do Daniel em mentorias;
-function amountOfpixel(numbBaseOfLine) {
-  const containerBase = document.querySelector('#pixel-board');
-  const addDiv = document.createElement('div');
-  containerBase.appendChild(addDiv);
-  const addPixel1 = document.createElement('div');
-  addPixel1.classList.add('pixel');
-  const containerTagBase = document.querySelector('#pixel-board div');
-  containerTagBase.appendChild(addPixel1);
-  for (let index = 1; index < numbBaseOfLine; index += 1) {
-    const addPixel = document.createElement('div');
-    addPixel.classList.add('pixel');
-    containerTagBase.appendChild(addPixel);
+const addColorToPixelPalette = () => {
+  colorPalette.firstChild.style.backgroundColor = 'rgb(0, 0, 0)';
+  colorPalette.firstChild.classList.add('selected');
+  for (let i = 1; i < colorPalette.children.length; i += 1) {
+    colorPalette.children[i].style.backgroundColor = ramdomColor();
   }
-  for (let index = 1; index < numbBaseOfLine; index += 1) {
-    const cloneLine = containerTagBase.cloneNode(true);
-    containerBase.appendChild(cloneLine);
+};
+
+const createColorPalette = (amount) => {
+  for (let i = 1; i <= amount; i += 1) {
+    colorPalette.appendChild(tagFactory('div', 'color'));
   }
-  letsPaint();
-}
+  addColorToPixelPalette();
+};
 
-amountOfpixel(5);
-
-function checkValuesOf(choiceX) {
-  if (choiceX < 5 && choiceX > 0) {
-    userChoice = 5;
-  } if (choiceX > 50) {
-    userChoice = 50;
+const setPixelsToWhiteColor = () => {
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'rgb(255, 255, 255)';
   }
-  return userChoice;
-}
+};
 
-function changed() {
-  userChoice = inputElement.valueAsNumber;
-  if (userChoice < 1 || inputElement.value === '') {
-    return alert('Board inválido!');
+const createPixelBoard = (amount) => {
+  pixelBoard.innerHTML = '';
+  pixelLine.innerHTML = '';
+  for (let i = 0; i < amount; i += 1) {
+    pixelLine.appendChild(tagFactory('div', 'pixel'));
   }
-  checkValuesOf(userChoice);
-  document.querySelector('#pixel-board').innerHTML = '';
-  amountOfpixel(userChoice);
-}
-const buttonListener = document.querySelector('#generate-board');
-buttonListener.addEventListener('click', changed);
+  for (let index = 0; index < amount; index += 1) {
+    pixelBoard.appendChild(pixelLine.cloneNode(true));
+  }
+  setPixelsToWhiteColor();
+};
 
-function changeColorOptions() {
-  const r = Math.floor(Math.random() * 255);
-  const g = Math.floor(Math.random() * 255);
-  const b = Math.floor(Math.random() * 255);
+const removeSelectedClass = () => {
+  for (let i = 0; i < colorPalette.children.length; i += 1) {
+    colorPalette.children[i].classList.remove('selected');
+  }
+};
 
-  return 'rgb(' + [r,g,b].join(',') + ')';
-}
-const ramdomColor = document.querySelectorAll('#color-palette div');
-ramdomColor[1].style.backgroundColor = changeColorOptions();
-ramdomColor[2].style.backgroundColor = changeColorOptions();
-ramdomColor[3].style.backgroundColor = changeColorOptions();
+const colorSelectedFromPalette = (event) => {
+  removeSelectedClass();
+  if (event.target.classList.contains('color') === true) {
+    event.target.classList.add('selected');
+  }
+};
+
+const paintPixel = (event) => {
+  const pixelToPaint = event.target;
+  const colorSelected = document.querySelector('.selected');
+  if (pixelToPaint.classList.contains('pixel') === true) {
+    pixelToPaint.style.backgroundColor = colorSelected.style.backgroundColor;
+  }
+};
+
+const checkInputValue = () => {
+  if (inputN.value === '0' || inputN.value === '') {
+    return alert('"Board inválido!"');
+  }
+  if (inputN.value < 5) {
+    inputN.value = 5;
+  }
+  if (inputN.value > 50) {
+    inputN.value = 50;
+  }
+  createPixelBoard(inputN.value);
+};
+
+eventFactory(colorPalette, 'click', colorSelectedFromPalette);
+eventFactory(pixelBoard, 'click', paintPixel);
+eventFactory(buttonClear, 'click', setPixelsToWhiteColor);
+eventFactory(buttonVQV, 'click', checkInputValue);
+eventFactory(inputNP, 'change', () => {
+  colorPalette.innerHTML = '';
+  createColorPalette(inputNP.value);
+});
+
+window.onload = () => {
+  createColorPalette('4');
+  createPixelBoard('5');
+};

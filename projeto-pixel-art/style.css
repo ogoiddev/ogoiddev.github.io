@@ -1,97 +1,82 @@
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 30px auto;
+  background-image: url(fundo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-span {
-    font-size: 12px;
-}
-#readme {
-    font-size: 1em
+#palette {
+  max-width: 630px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  margin: 10px;
+  background: rgba(236, 230, 213, 0.877);
+  padding: 0 30px;
+  border-radius: 20px;
 }
 
-#inputButton {
-    display: flex;
-    justify-content: center;
-}
-#inputButton input, button {
-    border: 1px groove;
-    border-radius: 15px;
-    margin: 10px;
-    padding: auto;
-    font-size: 12px;
-}
-#inputButton input {
-    width: 50px;
-    height: 30px;
-    text-align: center;
-    font-weight: 900;
-    padding: 2px 5px;
+h2 {
+  font-size: 1em;
 }
 
 #color-palette {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px auto;
+  max-width: 490px;
+  justify-content: center;
 }
+
 .color {
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin: 10px;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50% 50% 20% 70%;
+  margin: 3px;
+  position: relative;
 }
 
-#clear-board {
-    display: inline-block;
-    font-size: 12px;
-    background-color: #000;
-    color: rgb(255, 251, 0);
-    border-radius: 10px;
-    height: 20px;
-    width: 90px;
-}
-#eraser {
-    background-color: #fff;
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin: auto;
-}
-#eraserText {
-    display: inline;
+.selected::after {
+  content: '';
+  display: flex;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 8px 4px rgb(18, 185, 26);
 }
 
-#color-palette div:nth-child(1) {
-    background-color: #000;
+.containerInputButtons {
+  margin: 20px auto;
 }
+
 #pixel-board {
-    margin: 20px 0 0 0;
-    padding: 10px 10px 150px 0;
-    background-image: url(palco.png);
-    background-size: 100%;
-    background-position: 0 80%;
-}
-#pixel-board div {
-    display: flex;
-    justify-content: center;
-}
-.pixel {
-    background-color: #fff;
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-footer {
-    background-color: rgb(0, 42, 0);
-    color: white;
-    font-size: 12px;
-    padding: 2px;
-    width: 100%;
-    height: 200px;
-    position: sticky;
+#pixel-line {
+  display: flex;
+}
+
+.pixel {
+  border: 1px solid black;
+  border-radius: 1px;
+  width: 40px;
+  height: 40px;
 }

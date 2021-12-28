@@ -1,33 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixels_Art</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 id="title">Paleta de Cores</h1>
-    <p id="readme">Olá, bem vindo ao PaintToBeHappy!!! <br> Vamos brincar de pintar em pixels? <br> <span> \\\ digita abaixo um numero entre 5 e 50 que desejar e clique em "VQV" ///</span></p>
-    <section id="color-palette">
-        <div class="selected color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="palette">
+      <h1 id="title">"Paleta de Cores"</h1>
+      <h2>Escolha uma quantidade de cores<br />(limite: 50)</h2>
+      <input id="palette-size" type="range" min="5" max="50" />
+      <div id="color-palette"></div>
     </section>
-    <div id="inputButton">
-        <input id="board-size" type="number" value="" min="1" max="49">
-        <button id="generate-board">"VQV"</button>
-    </div>
-    <button id="clear-board">Limpar</button>
-        <div id="eraser"></div>
-        <p id="eraserText">Borracha</p>
+    <section class="containerInputButtons">
+      <input id="board-size" type="number" min="1" max="50" />
+      <button id="generate-board">"VQV"</button>
+      <button id="clear-board">Limpar</button>
     </section>
-    <main id="pixel-board"></main>
-    <footer>
-        <p>@ogoidmp</p>
-    </footer>
-    <script type="text/javascript" src="script.js"></script>
-</body>
+    <main>
+      <div id="pixel-board">
+        <div id="pixel-line"></div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>

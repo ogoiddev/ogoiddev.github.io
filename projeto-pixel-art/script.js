@@ -42,7 +42,7 @@ const createColorPalette = (amount) => {
 
 const setPixelsToWhiteColor = () => {
   for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.backgroundColor = 'rgb(255, 255, 255)';
+    pixels[i].style.backgroundColor = 'white';
   }
 };
 
@@ -92,8 +92,21 @@ const checkInputValue = () => {
   createPixelBoard(inputN.value);
 };
 
+let mouseIsDown = false;
 eventFactory(colorPalette, 'click', colorSelectedFromPalette);
-eventFactory(pixelBoard, 'click', paintPixel);
+pixelBoard.addEventListener('mousedown', (event) => {
+  mouseIsDown = true;
+  paintPixel(event);
+});
+pixelBoard.addEventListener('mouseup', () => {
+  mouseIsDown = false;
+});
+pixelBoard.addEventListener('mousemove', (event) => {
+  if (mouseIsDown) {
+    paintPixel(event);
+  }
+});
+
 eventFactory(buttonClear, 'click', setPixelsToWhiteColor);
 eventFactory(buttonVQV, 'click', checkInputValue);
 eventFactory(inputNP, 'change', () => {

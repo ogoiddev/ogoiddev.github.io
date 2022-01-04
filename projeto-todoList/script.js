@@ -20,30 +20,28 @@ inputText.addEventListener('keydown', (wen) => {
   }
 });
 
-function clearBackground() {
-  for (let index = 0; index < listOf.children.length; index += 1) {
-    listOf.children[index].style.backgroundColor = '';
+function selectedLi(event) {
+  if (event.target.id !== 'lista-tarefas') {
+    const selectedBefore = document.querySelector('.select');
+    if (selectedBefore !== null) {
+      selectedBefore.classList.remove('select');
+    }
+    event.target.classList.add('select');
   }
 }
 
-const colorOfSelect = 'rgb(128, 128, 128)';
-function selectedLi(event) {
-  if (event.target.id !== 'lista-tarefas') {
-    clearBackground();
-    const colorOfBackground = event.target;
-    colorOfBackground.style.backgroundColor = colorOfSelect;
-  }
-}
 listOf.addEventListener('click', selectedLi);
 
 function clearSelected() {
   for (let index = 0; index < listOf.children.length; index += 1) {
-    if (listOf.children[index].style.backgroundColor === colorOfSelect) {
+    if (listOf.children[index].classList.contains('select') === true) {
       listOf.removeChild(listOf.children[index]);
     }
   }
 }
-document.querySelector('#remover-selecionado').addEventListener('click', clearSelected);
+document
+  .querySelector('#remover-selecionado')
+  .addEventListener('click', clearSelected);
 
 function selectedToDone(event) {
   const lineThrough = event.target;
@@ -74,30 +72,34 @@ function clearAllDone() {
     listOf.removeChild(listAll[0]);
   }
 }
-document.querySelector('#remover-finalizados').addEventListener('click', clearAllDone);
+document
+  .querySelector('#remover-finalizados')
+  .addEventListener('click', clearAllDone);
 
 function saveList() {
   const itensOfList = [];
   const listToBeSave = listOf.children;
-  for (let index = 0; index < listOf.children.length; index += 1) {
-    itensOfList.push(listToBeSave[index].innerText);
-    itensOfList.push(listToBeSave[index].className);
+  for (let index = 0; index < listToBeSave.length; index += 1) {
+    const { innerText } = listToBeSave[index];
+    const { className } = listToBeSave[index];
+    const listObject = { innerText, className };
+    itensOfList.push(listObject);
   }
-  localStorage.setItem('conteudo', itensOfList);
+  localStorage.setItem('conteudo', JSON.stringify(itensOfList));
 }
+
 document.querySelector('#salvar-tarefas').addEventListener('click', saveList);
 
 window.addEventListener('load', () => {
-  if (localStorage.getItem('conteudo') === null) {
-    return;
-  }
-  const element = localStorage.getItem('conteudo').split(',');
-  console.log(element);
-  for (let index = 0; index < element.length; index += 2) {
-    const liElement = document.createElement('li');
-    liElement.innerText = element[index];
-    liElement.className = element[index + 1];
-    listOf.appendChild(liElement);
+  if (localStorage.getItem('conteudo') !== null) {
+    const element = JSON.parse(localStorage.getItem('conteudo'));
+    console.log(element);
+    for (let index = 0; index < element.length; index += 1) {
+      const liElement = document.createElement('li');
+      liElement.innerText = element[index].innerText;
+      liElement.className = element[index].className;
+      listOf.appendChild(liElement);
+    }
   }
 });
 
@@ -116,7 +118,7 @@ function creatNew(arr) {
 function moveUp() {
   let arrayString = [...listOf.children];
   for (let index = 1; index < listOf.children.length; index += 1) {
-    if (listOf.children[index].style.backgroundColor === colorOfSelect) {
+    if (listOf.children[index].classList.contains('select') === true) {
       arrayString = changePositionTo(arrayString, index, index - 1);
     }
   }
@@ -128,7 +130,7 @@ document.querySelector('#mover-cima').addEventListener('click', moveUp);
 function moveDown() {
   let arrayString = [...listOf.children];
   for (let index = listOf.children.length - 2; index >= 0; index -= 1) {
-    if (listOf.children[index].style.backgroundColor === colorOfSelect) {
+    if (listOf.children[index].classList.contains('select') === true) {
       arrayString = changePositionTo(arrayString, index + 1, index);
     }
   }

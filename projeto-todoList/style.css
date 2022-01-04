@@ -6,7 +6,8 @@ body {
   text-align: center;
   align-items: center;
   height: 763px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 header {
@@ -57,12 +58,11 @@ main {
   background: red;
   color: #fff;
   font-weight: 800;
-
 }
 #apaga-tudo:hover {
   font-size: 18px;
   transition-duration: 0.3s;
-  box-shadow: 2px 2px 15px rgb(255, 96, 96);  
+  box-shadow: 2px 2px 15px rgb(255, 96, 96);
 }
 
 .sectionList {
@@ -74,7 +74,7 @@ main {
   margin: auto 0;
 }
 #lista-tarefas {
-  background-color: rgba(128, 128, 128, 0.205);
+  background-color: rgba(12, 4, 4, 0.205);
   font-family: monospace;
   height: 330px;
   font-size: 23px;
@@ -90,6 +90,10 @@ li {
   padding: 7px;
 }
 
+.select {
+  background-color: rgb(128, 128, 128);
+  color: white;
+}
 
 .completed {
   text-decoration: line-through solid rgb(0, 0, 0);
@@ -110,48 +114,41 @@ li {
 footer {
   bottom: 20px;
   position: fixed;
-  
 }
 
-
-
-
-
-
-
 #criar-tarefa {
-	color: #000;
+  color: #000;
   padding: 10px;
-	cursor: pointer;
-	display: block;
-	position: relative;
-	border: 1px solid #F7CA18;
-	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border: 1px solid #f7ca18;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
   border-radius: 7px;
   width: 230px;
   font-size: 16px;
   font-weight: 600;
 }
 #criar-tarefa:hover {
-	color: #000 !important;
-	background-color: transparent;
-	text-shadow: nthree;
+  color: #000 !important;
+  background-color: transparent;
+  text-shadow: nthree;
 }
 #criar-tarefa:hover:before {
-	left: 0%;
-	right: auto;
-	width: 100%;
+  left: 0%;
+  right: auto;
+  width: 100%;
 }
 #criar-tarefa:before {
-	display: block;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	height: 100%;
-	width: 0px;
-	z-index: -1;
-	content: '';
-	color: #000 !important;
-	background: #F7CA18;
-	transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
-} 
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  content: '';
+  color: #000 !important;
+  background: #f7ca18;
+  transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+}

@@ -13,7 +13,8 @@
     <script src="https://kit.fontawesome.com/0ab55da73a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <p id="top"></p> 
+
+    <!-- <p id="top"></p> 
     <div id="header">
         <ul>
             <a href="#sobreT" >Sobre mim</a> 
@@ -21,7 +22,7 @@
             <a href="#projetos">Projetos</a>
         </ul>
     </div>        
-  
+   -->
     
     <div class="container">
         <h1 id="apresenta">Olá, meu nome é <br> Diogo Martini Pantaleão</h1>
@@ -33,6 +34,32 @@
             <a target="_blank" href="https://www.linkedin.com/in/dmpdev/"><i class="fab fa-linkedin"></i></a>
         </div>       
     </div>  
+
+    <form id='myForm' action="https://formsubmit.co/ogoiddev@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="http://127.0.0.1:5501/index.html">
+        <label for="inputFirstName"> Nome:
+        <input id='inputFirstName' name='name' itype="text" placeholder='Digite seu nome aqui' required>
+        </label>
+        <label for="inputLastName"> Sobrenome:
+        <input id='inputLastName' name='lastName' itype="text" placeholder='Digite seu Sobrenome' required>
+        </label>
+        <label for="inputEmail"> Sobrenome:
+        <input id='inputEmail' name='email' itype="email" placeholder='Digite seu e-mail' required>
+        </label>
+        <label for="inputAbout"> Assunto:
+        <input id='inputAbout'name='about' itype="text" placeholder='Sobre o que vamos conversar?' required>
+        </label>
+        <label for="textMessage"> Escreva sua menssagem: </label>
+        <textarea name="message" id="textMessage" maxlength='500' cols="30" rows="10" placeholder='Fique a vontade em perguntar, dar sugestões ou até mesmo apresentar boas ofertas que queira compartilhar comigo'></textarea>
+        
+        <input id='counter' value='500'></input>
+        <button id='submit' type='submit'>Enviar</button>
+    </form>
+
+
+
+
+
 <div class="paragrafos">
     <div class="p1">
       <div id="habilidadesT"></div>
@@ -66,6 +93,6 @@
  <div id="topRef"><a href="#top"><i class="fas fa-arrow-circle-up"></i></a></div>
 
         
-       
+       <script src='script.js'></script>
 </body>
 </html>

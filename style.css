@@ -144,3 +144,23 @@ span.italico {
     margin: 0px auto 190px auto;
     display: block;
 }
+
+
+
+form, label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+ border: solid 1px;   
+    width: 500px;
+}
+
+input {
+    flex-grow: 1;
+}
+
+#counter {
+    border: solid 1px;
+    color: green;
+}
